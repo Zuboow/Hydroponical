@@ -22,7 +22,7 @@ namespace Hydroponical.Logic.Player
 
 		protected virtual void Start ()
 		{
-            SetCursorLockState();
+            //SetCursorLockState();
 		}
 
 		protected virtual void OnEnable ()

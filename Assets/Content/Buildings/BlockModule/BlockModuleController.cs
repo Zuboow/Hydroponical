@@ -53,18 +53,18 @@ namespace Hydroponical.Logic.Buildings
             }
 		}
 
-        protected virtual void Start ()
-		{
-            UpdateWallsOnStart();
-		}
-
-        private void UpdateWallsOnStart ()
-		{
+        public void UpdateWalls ()
+        {
             SwitchWall(WallSide.East, IsEastWallOpen);
             SwitchWall(WallSide.West, IsWestWallOpen);
             SwitchWall(WallSide.North, IsNorthWallOpen);
             SwitchWall(WallSide.South, IsSouthWallOpen);
         }
+
+        protected virtual void Start ()
+		{
+            UpdateWalls();
+		}
 
         public enum WallSide
 		{

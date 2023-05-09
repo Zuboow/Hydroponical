@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2728822687741060796}
   - component: {fileID: 4648154206584336609}
   m_Layer: 0
-  m_Name: BlankWallUp
+  m_Name: BlankWallNorth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 8742977483163497763}
   - component: {fileID: 2236991237969956850}
   m_Layer: 0
-  m_Name: EntranceRight
+  m_Name: EntranceWallEast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 7872458404385135517}
   - component: {fileID: 459144711924615835}
   m_Layer: 0
-  m_Name: EntranceDown
+  m_Name: EntranceWallSouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -347,7 +347,7 @@ GameObject:
   - component: {fileID: 5272240080143944187}
   - component: {fileID: 61889043288660179}
   m_Layer: 0
-  m_Name: BlankWallLeft
+  m_Name: BlankWallWest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -594,7 +594,7 @@ GameObject:
   - component: {fileID: 5910260357542820464}
   - component: {fileID: 2855230307391237925}
   m_Layer: 0
-  m_Name: BlankWallRight
+  m_Name: BlankWallEast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -678,7 +678,7 @@ GameObject:
   - component: {fileID: 3418424488232353358}
   - component: {fileID: 5847435130302373677}
   m_Layer: 0
-  m_Name: BlankWallDown
+  m_Name: BlankWallSouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -762,7 +762,7 @@ GameObject:
   - component: {fileID: 1800450684398584977}
   - component: {fileID: 3416474008013538338}
   m_Layer: 0
-  m_Name: EntranceUp
+  m_Name: EntranceWallNorth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -880,12 +880,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2af8dd5031abed4ea2d756d13407c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <BlankEastWall>k__BackingField: {fileID: 3096938433386628279}
-  <BlankWestWall>k__BackingField: {fileID: 1355324347031024634}
+  <BlankEastWall>k__BackingField: {fileID: 1355324347031024634}
+  <BlankWestWall>k__BackingField: {fileID: 3096938433386628279}
   <BlankNorthWall>k__BackingField: {fileID: 6227041996467160144}
   <BlankSouthWall>k__BackingField: {fileID: 7143505868669254007}
-  <EntranceEastWall>k__BackingField: {fileID: 3063051404977898147}
-  <EntranceWestWall>k__BackingField: {fileID: 3430641221157639784}
+  <EntranceEastWall>k__BackingField: {fileID: 3430641221157639784}
+  <EntranceWestWall>k__BackingField: {fileID: 3063051404977898147}
   <EntranceNorthWall>k__BackingField: {fileID: 4643525042342647271}
   <EntranceSouthWall>k__BackingField: {fileID: 3852029794103242398}
   <IsEastWallOpen>k__BackingField: 0
@@ -904,7 +904,7 @@ GameObject:
   - component: {fileID: 7276105755993846251}
   - component: {fileID: 3247387529901455668}
   m_Layer: 0
-  m_Name: EntranceLeft
+  m_Name: EntranceWallWest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,7 +1056,7 @@ PrefabInstance:
     - target: {fileID: 7218765271685596505, guid: 0cfdc3bdf6575e54c98c0ab413fd2ac7,
         type: 3}
       propertyPath: m_Name
-      value: LeftBlankWallCollider
+      value: BlankWallWestCollider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfdc3bdf6575e54c98c0ab413fd2ac7, type: 3}
@@ -1146,7 +1146,7 @@ PrefabInstance:
     - target: {fileID: 7218765271685596505, guid: 0cfdc3bdf6575e54c98c0ab413fd2ac7,
         type: 3}
       propertyPath: m_Name
-      value: RightBlankWallCollider
+      value: BlankWallEastCollider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfdc3bdf6575e54c98c0ab413fd2ac7, type: 3}
@@ -1166,7 +1166,7 @@ PrefabInstance:
     - target: {fileID: 2739670097483580360, guid: 78edfec8b5435d64d83197503b93a71e,
         type: 3}
       propertyPath: m_Name
-      value: LeftEntranceWallColliders
+      value: EntranceWallWestColliders
       objectReference: {fileID: 0}
     - target: {fileID: 2739670097483580361, guid: 78edfec8b5435d64d83197503b93a71e,
         type: 3}
@@ -1256,7 +1256,7 @@ PrefabInstance:
     - target: {fileID: 2739670097483580360, guid: 78edfec8b5435d64d83197503b93a71e,
         type: 3}
       propertyPath: m_Name
-      value: DownEntranceWallColliders
+      value: EntranceWallSouthColliders
       objectReference: {fileID: 0}
     - target: {fileID: 2739670097483580361, guid: 78edfec8b5435d64d83197503b93a71e,
         type: 3}
@@ -1416,7 +1416,7 @@ PrefabInstance:
     - target: {fileID: 7218765271685596505, guid: 0cfdc3bdf6575e54c98c0ab413fd2ac7,
         type: 3}
       propertyPath: m_Name
-      value: UpBlankWallCollider
+      value: BlankWallNorthCollider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfdc3bdf6575e54c98c0ab413fd2ac7, type: 3}
@@ -1436,7 +1436,7 @@ PrefabInstance:
     - target: {fileID: 2739670097483580360, guid: 78edfec8b5435d64d83197503b93a71e,
         type: 3}
       propertyPath: m_Name
-      value: UpEntranceWallColliders
+      value: EntranceWallNorthColliders
       objectReference: {fileID: 0}
     - target: {fileID: 2739670097483580361, guid: 78edfec8b5435d64d83197503b93a71e,
         type: 3}
@@ -1526,7 +1526,7 @@ PrefabInstance:
     - target: {fileID: 2739670097483580360, guid: 78edfec8b5435d64d83197503b93a71e,
         type: 3}
       propertyPath: m_Name
-      value: RightEntranceWallColliders
+      value: EntranceWallEastColliders
       objectReference: {fileID: 0}
     - target: {fileID: 2739670097483580361, guid: 78edfec8b5435d64d83197503b93a71e,
         type: 3}
@@ -1686,7 +1686,7 @@ PrefabInstance:
     - target: {fileID: 7218765271685596505, guid: 0cfdc3bdf6575e54c98c0ab413fd2ac7,
         type: 3}
       propertyPath: m_Name
-      value: DownBlankWallCollider
+      value: BlankWallSouthCollider
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0cfdc3bdf6575e54c98c0ab413fd2ac7, type: 3}
