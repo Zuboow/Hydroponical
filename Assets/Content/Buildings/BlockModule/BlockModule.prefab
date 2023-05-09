@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6227041996467160144
 Transform:
   m_ObjectHideFlags: 0
@@ -184,7 +184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3430641221157639784
 Transform:
   m_ObjectHideFlags: 0
@@ -268,7 +268,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3852029794103242398
 Transform:
   m_ObjectHideFlags: 0
@@ -352,7 +352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3096938433386628279
 Transform:
   m_ObjectHideFlags: 0
@@ -599,7 +599,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1355324347031024634
 Transform:
   m_ObjectHideFlags: 0
@@ -683,7 +683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7143505868669254007
 Transform:
   m_ObjectHideFlags: 0
@@ -767,7 +767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4643525042342647271
 Transform:
   m_ObjectHideFlags: 0
@@ -880,6 +880,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2af8dd5031abed4ea2d756d13407c3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  <BlankEastWall>k__BackingField: {fileID: 3096938433386628279}
+  <BlankWestWall>k__BackingField: {fileID: 1355324347031024634}
+  <BlankNorthWall>k__BackingField: {fileID: 6227041996467160144}
+  <BlankSouthWall>k__BackingField: {fileID: 7143505868669254007}
+  <EntranceEastWall>k__BackingField: {fileID: 3063051404977898147}
+  <EntranceWestWall>k__BackingField: {fileID: 3430641221157639784}
+  <EntranceNorthWall>k__BackingField: {fileID: 4643525042342647271}
+  <EntranceSouthWall>k__BackingField: {fileID: 3852029794103242398}
+  <IsEastWallOpen>k__BackingField: 0
+  <IsWestWallOpen>k__BackingField: 0
+  <IsNorthWallOpen>k__BackingField: 0
+  <IsSouthWallOpen>k__BackingField: 0
 --- !u!1 &8483597024922312424
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,7 +909,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3063051404977898147
 Transform:
   m_ObjectHideFlags: 0
