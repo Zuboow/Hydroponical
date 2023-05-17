@@ -54,18 +54,13 @@ namespace Hydroponical.Logic.Player
 			PlayerActionsComponent.Movement.Sprint.canceled -= StopSprinting;
 		}
 
-		protected virtual void FixedUpdate ()
+		protected virtual void Update ()
 		{
 			MovePlayer();
 		}
 
 		private void MovePlayer ()
 		{
-			if (PlayerCharacterController.isGrounded == true && playerVelocity.y < 0.0f)
-			{
-				playerVelocity.y = -FallSpeedScale;
-			}
-
 			Vector3 moveInput = PlayerActionsComponent.Movement.Move.ReadValue<Vector2>();
 			playerVelocity.y += -GravityScale * Time.deltaTime;
 			float speedMultiplier = PlayerSpeed * (IsSprinting == true && PlayerCharacterController.isGrounded == true ? PlayerSprintMultiplier : 1.0f);

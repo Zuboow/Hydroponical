@@ -48,10 +48,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <PlayerSpeed>k__BackingField: 3
-  <PlayerSprintMultiplier>k__BackingField: 1.6
+  <PlayerSprintMultiplier>k__BackingField: 2.5
   <PlayerJumpForce>k__BackingField: 12
   <GravityScale>k__BackingField: 9.81
-  <FallSpeedScale>k__BackingField: 0.2
+  <FallSpeedScale>k__BackingField: 0.15
   <PlayerCharacterController>k__BackingField: {fileID: 4351208293322406153}
 --- !u!143 &4351208293322406153
 CharacterController:
@@ -66,7 +66,7 @@ CharacterController:
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.6
-  m_SlopeLimit: 45
+  m_SlopeLimit: 90
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
@@ -119,7 +119,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4351208293785496670}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -198,7 +198,7 @@ Camera:
   m_GameObject: {fileID: 4351208294839577386}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 2
+  m_ClearFlags: 1
   m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
