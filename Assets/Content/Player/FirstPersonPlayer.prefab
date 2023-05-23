@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4351208293322406155}
   - component: {fileID: 4351208293322406152}
   - component: {fileID: 4351208293322406153}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: FirstPersonPlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 4351208293785496665}
   - component: {fileID: 4351208293785496667}
   - component: {fileID: 4351208293785496664}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlayerMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,8 @@ GameObject:
   - component: {fileID: 4351208294839577381}
   - component: {fileID: 4351208294839577382}
   - component: {fileID: 330585548}
-  m_Layer: 0
+  - component: {fileID: 2048345796}
+  m_Layer: 2
   m_Name: FirstPersonCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -198,8 +199,8 @@ Camera:
   m_GameObject: {fileID: 4351208294839577386}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.3820755, g: 0.7493733, b: 1, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -287,3 +288,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <MouseSensitivity>k__BackingField: 14
   <PlayerTransform>k__BackingField: {fileID: 4351208293322406155}
+--- !u!114 &2048345796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4351208294839577386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b975d36c36f3d7b44b024022506a1df2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <RaycastDistance>k__BackingField: 3
