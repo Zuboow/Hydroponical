@@ -28,28 +28,21 @@ namespace Hydroponical.Logic.Player
 		protected virtual void OnEnable ()
 		{
 			PlayerActionsComponent.Camera.Enable();
-			AttachToEvents();
 		}
 
 		protected virtual void OnDisable ()
 		{
 			PlayerActionsComponent.Camera.Disable();
-			DetachFromEvents();
 		}
 
-		protected virtual void AttachToEvents ()
+		protected virtual void Update ()
 		{
-			PlayerActionsComponent.Camera.Mouse.performed += MoveCamera;
+			MoveCamera();
 		}
 
-		protected virtual void DetachFromEvents ()
+		private void MoveCamera ()
 		{
-			PlayerActionsComponent.Camera.Mouse.performed -= MoveCamera;
-		}
-
-		private void MoveCamera (InputAction.CallbackContext callback)
-		{
-			Vector2 mouseMovement = callback.ReadValue<Vector2>() * MouseSensitivity * Time.deltaTime;
+			Vector2 mouseMovement = PlayerActionsComponent.Camera.Mouse.ReadValue<Vector2>() * MouseSensitivity * Time.deltaTime;
 
 			XRotation -= mouseMovement.y;
 			XRotation = Mathf.Clamp(XRotation, MinXRotation, MaxXRotation);
