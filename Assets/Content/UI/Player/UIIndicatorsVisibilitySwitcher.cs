@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 
 namespace Hydroponical.UI
@@ -6,21 +5,41 @@ namespace Hydroponical.UI
     public class UIIndicatorsVisibilitySwitcher : MonoBehaviour
     {
         [field: SerializeField]
-        private TextMeshProUGUI InteractableUseIndicator { get; set; }
+        private Transform InteractableUseIndicator { get; set; }
+
+        protected virtual void Start ()
+		{
+            InitializeVisibility();
+		}
 
         protected virtual void OnEnable ()
 		{
-            GlobalActions.OnInteractableRaycast += SetInteractableUseIndicatorVisibility;
+            AttachToEvents();
 		}
 
         protected virtual void OnDisable ()
+        {
+            DetachFromEvents();
+        }
+
+        private void AttachToEvents ()
+		{
+            GlobalActions.OnInteractableRaycast += SetInteractableUseIndicatorVisibility;
+        }
+
+        private void DetachFromEvents ()
         {
             GlobalActions.OnInteractableRaycast -= SetInteractableUseIndicatorVisibility;
         }
 
         private void SetInteractableUseIndicatorVisibility (bool isVisible)
 		{
-            InteractableUseIndicator.gameObject.SetActive(isVisible);
+            InteractableUseIndicator.gameObject.SetActiveOptimized(isVisible);
 		}
+
+        private void InitializeVisibility ()
+		{
+            SetInteractableUseIndicatorVisibility(false);
+        }
     }
 }

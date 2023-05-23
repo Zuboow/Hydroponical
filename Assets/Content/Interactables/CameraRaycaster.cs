@@ -19,18 +19,27 @@ namespace Hydroponical.UI
         {
             if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out RaycastHit hit, RaycastDistance) == true)
             {
-                CurrentlyHitInteractable = hit.transform.GetComponent<IInteractable>();
+                IInteractable hitInteractable = hit.transform.GetComponent<IInteractable>();
 
-                if (CurrentlyHitInteractable != null)
+                if (CurrentlyHitInteractable != hitInteractable)
                 {
-                    CurrentlyHitInteractable.NotifyOnInteractableRaycast(true);
+                    SetCurrentlyHitInteractable(hitInteractable, true);
+                }
+                else if (hitInteractable == null)
+				{
+                    SetCurrentlyHitInteractable(null, false);
                 }
             }
-            else if (CurrentlyHitInteractable != null)
+            else
 			{
-                CurrentlyHitInteractable.NotifyOnInteractableRaycast(false);
-                CurrentlyHitInteractable = null;
+                SetCurrentlyHitInteractable(null, false);
 			}
+        }
+
+        private void SetCurrentlyHitInteractable (IInteractable hitInteractable, bool isHit)
+		{
+            CurrentlyHitInteractable = hitInteractable;
+            GlobalActions.NotifyOnInteractableRaycast(isHit);
         }
     }
 }
