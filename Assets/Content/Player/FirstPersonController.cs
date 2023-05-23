@@ -18,10 +18,14 @@ namespace Hydroponical.Logic.Player
 		[field: SerializeField]
 		private CharacterController PlayerCharacterController { get; set; }
 
+		private Vector3 MoveInput { get; set; }
+
 		private PlayerActions PlayerActionsComponent { get; set; }
 		private bool IsSprinting { get; set; } = false;
+		private bool IsJumpingAfterSprinting { get; set; } = false;
 
-		private Vector3 playerVelocity;
+
+		private Vector3 playerVerticalVelocity;
 
 		protected virtual void Awake ()
 		{
@@ -61,18 +65,25 @@ namespace Hydroponical.Logic.Player
 
 		private void MovePlayer ()
 		{
-			Vector3 moveInput = PlayerActionsComponent.Movement.Move.ReadValue<Vector2>();
-			playerVelocity.y += -GravityScale * Time.deltaTime;
-			float speedMultiplier = PlayerSpeed * (IsSprinting == true && PlayerCharacterController.isGrounded == true ? PlayerSprintMultiplier : 1.0f);
+			MoveInput = PlayerActionsComponent.Movement.Move.ReadValue<Vector2>();
+			if (MoveInput.magnitude == 0.0f)
+			{
+				IsJumpingAfterSprinting = false;
+			}
 
-			PlayerCharacterController.Move(((transform.right * moveInput.x + transform.forward * moveInput.y) * speedMultiplier + playerVelocity) * Time.deltaTime);
+			playerVerticalVelocity.y += -GravityScale * Time.deltaTime;
+			Vector3 movement = GetBaseMovement() + playerVerticalVelocity;
+
+			PlayerCharacterController.Move(movement * Time.deltaTime);
 		}
 
 		private void Jump (InputAction.CallbackContext callback)
 		{
 			if (PlayerCharacterController.isGrounded == true)
 			{
-				playerVelocity.y = Mathf.Sqrt(PlayerJumpForce * -FallSpeedScale * -GravityScale);
+				IsJumpingAfterSprinting = IsSprinting;
+
+				playerVerticalVelocity.y = Mathf.Sqrt(PlayerJumpForce * -FallSpeedScale * -GravityScale);
 			}
 		}
 
@@ -89,6 +100,16 @@ namespace Hydroponical.Logic.Player
 		private void InitializePlayerActions ()
 		{
 			PlayerActionsComponent = new PlayerActions();
+		}
+
+		private Vector3 GetBaseMovement ()
+		{
+			return (transform.right* MoveInput.x + transform.forward * MoveInput.y) * GetSpeedMultiplier();
+		}
+
+		private float GetSpeedMultiplier ()
+		{
+			return PlayerSpeed * (IsSprinting == true || (IsJumpingAfterSprinting == true && PlayerCharacterController.isGrounded == false) ? PlayerSprintMultiplier : 1.0f);
 		}
 	}
 }
