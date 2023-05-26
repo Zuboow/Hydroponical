@@ -286,7 +286,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0674a6aa6807f1547988e73d1f5272d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <MouseSensitivity>k__BackingField: 14
+  <MouseSensitivity>k__BackingField: 1.8
   <PlayerTransform>k__BackingField: {fileID: 4351208293322406155}
 --- !u!114 &2048345796
 MonoBehaviour:

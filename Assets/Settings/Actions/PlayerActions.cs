@@ -155,7 +155,7 @@ public partial class @PlayerActions : IInputActionCollection2, IDisposable
                     ""id"": ""6a930ad5-fc69-4655-b832-560298b72372"",
                     ""path"": ""<Mouse>/delta"",
                     ""interactions"": """",
-                    ""processors"": """",
+                    ""processors"": ""ScaleVector2(x=0.1,y=0.1)"",
                     ""groups"": """",
                     ""action"": ""Mouse"",
                     ""isComposite"": false,

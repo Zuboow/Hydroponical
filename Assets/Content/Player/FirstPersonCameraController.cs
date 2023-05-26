@@ -42,7 +42,7 @@ namespace Hydroponical.Logic.Player
 
 		private void MoveCamera ()
 		{
-			Vector2 mouseMovement = PlayerActionsComponent.Camera.Mouse.ReadValue<Vector2>() * MouseSensitivity * Time.deltaTime;
+			Vector2 mouseMovement = PlayerActionsComponent.Camera.Mouse.ReadValue<Vector2>() * MouseSensitivity;
 
 			XRotation -= mouseMovement.y;
 			XRotation = Mathf.Clamp(XRotation, MinXRotation, MaxXRotation);
