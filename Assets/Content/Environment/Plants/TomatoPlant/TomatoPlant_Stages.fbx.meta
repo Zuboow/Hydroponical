@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fa7748e21a358734fae22c2bd362dbe6
+guid: 8845c510d1aaa6843a7e423b8ec3d6c0
 ModelImporter:
   serializedVersion: 21202
   internalIDToNameTable: []
@@ -12,6 +12,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Flower
+    second: {fileID: 2100000, guid: dbf3b9d3256b7544a85ba1ae7220aee5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: FruitLeaves
+    second: {fileID: 2100000, guid: 521b20e25adc4944cb72ea9933e1a7f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Leaf
     second: {fileID: 2100000, guid: b1bb889e25700374d9179f6ce9dbd594, type: 2}
   - first:
@@ -19,6 +29,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: PlantStem
     second: {fileID: 2100000, guid: b341f92310ac09449b2ce752b542b13b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RipeFruit
+    second: {fileID: 2100000, guid: 6d963ee4c1a2569418955654a36a2402, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UnripeFruit
+    second: {fileID: 2100000, guid: ac34e4fa64aad324a966820d37e39807, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
