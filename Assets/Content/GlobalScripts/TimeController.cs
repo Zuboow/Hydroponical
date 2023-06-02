@@ -1,3 +1,4 @@
+using Hydroponical.Settings;
 using System;
 using UnityEngine;
 
@@ -7,35 +8,43 @@ namespace Hydroponical.Logic.TimeManagement
     {
         public Action OnDayPass { get; set; } = delegate { };
 
-        [field: SerializeField, Range(0, 24)]
-        public float TimeOfDay { get; private set; }
         [field: SerializeField]
-        public float TimeScale { get; private set; } = 1.0f;
-
-        private float HourRange { get; set; } = 24.0f;
+        private TimeSettingsScriptableObject TimeSettings { get; set; }
+        [field: SerializeField]
+        private float InitialTime { get; set; } = 6.0f;
 
         public float GetDayPercentage ()
 		{
-            return TimeOfDay / HourRange;
+            return TimeSettings.TimeOfDay / TimeSettings.HourRange;
 		}
+
+        protected virtual void Start ()
+        {
+            InitializeTime(InitialTime);
+        }
 
         protected virtual void Update ()
         {
             PerformTimeOfDayUpdate();
         }
 
+        private void InitializeTime (float initialTime)
+		{
+            TimeSettings.TimeOfDay = initialTime;
+		}
+
         private void PerformTimeOfDayUpdate ()
         {
             if (Application.isPlaying == true)
             {
-                TimeOfDay += Time.deltaTime * TimeScale;
+                TimeSettings.TimeOfDay += Time.deltaTime * TimeSettings.TimeScale;
 
-                if (TimeOfDay >= HourRange)
+                if (TimeSettings.TimeOfDay >= TimeSettings.HourRange)
 				{
                     NotifyOnDayPass();
 				}
 
-                TimeOfDay %= HourRange;
+                TimeSettings.TimeOfDay %= TimeSettings.HourRange;
             }
         }
 

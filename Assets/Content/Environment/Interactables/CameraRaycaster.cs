@@ -21,13 +21,13 @@ namespace Hydroponical.UI
             {
                 IInteractable hitInteractable = hit.transform.GetComponent<IInteractable>();
 
-                if (CurrentlyHitInteractable != hitInteractable)
+                if (hitInteractable == null)
+                {
+                    SetCurrentlyHitInteractable(null, false);
+                }
+                else if (hitInteractable.IsCurrentlyInteractable() == true && CurrentlyHitInteractable != hitInteractable)
                 {
                     SetCurrentlyHitInteractable(hitInteractable, true);
-                }
-                else if (hitInteractable == null)
-				{
-                    SetCurrentlyHitInteractable(null, false);
                 }
             }
             else

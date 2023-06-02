@@ -1,8 +1,10 @@
 using Hydroponical.Logic.TimeManagement;
+using Hydroponical.Settings;
 using UnityEngine;
 
 namespace Hydroponical.Logic.Lighting
 {
+    [ExecuteAlways]
     public class LightingManager : MonoBehaviour
     {
         [field: SerializeField]
@@ -10,9 +12,21 @@ namespace Hydroponical.Logic.Lighting
         [field: SerializeField]
         private LightingPreset Preset { get; set; }
 
+        //For Editor use only
+        [field: SerializeField]
+        private TimeSettingsScriptableObject TimeSettings { get; set; }
+        //
+
         protected virtual void Update ()
 		{
-            PerformLightingUpdate(TimeController.Instance.GetDayPercentage());
+            if (Application.isPlaying == true)
+			{
+                PerformLightingUpdate(TimeController.Instance.GetDayPercentage());
+			}
+            else
+			{
+                EditorLightingUpdate();
+			}
 		}
 
         private void UpdateLighting (float dayPercentage)
@@ -35,6 +49,17 @@ namespace Hydroponical.Logic.Lighting
 			}
 
             UpdateLighting(dayPercentage);
+        }
+
+        // For Editor use only
+        private void EditorLightingUpdate ()
+		{
+            if (Preset == null)
+            {
+                return;
+            }
+
+            UpdateLighting(TimeSettings.TimeOfDay / TimeSettings.HourRange);
         }
     }
 }
