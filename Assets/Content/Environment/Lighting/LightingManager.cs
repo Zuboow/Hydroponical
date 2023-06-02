@@ -1,55 +1,40 @@
+using Hydroponical.Logic.TimeManagement;
 using UnityEngine;
 
 namespace Hydroponical.Logic.Lighting
 {
-    [ExecuteAlways]
     public class LightingManager : MonoBehaviour
     {
         [field: SerializeField]
         private Light DirectionalLight { get; set; }
         [field: SerializeField]
         private LightingPreset Preset { get; set; }
-        [field: SerializeField, Range(0, 24)]
-        private float TimeOfDay { get; set; }
-        [field: SerializeField]
-        private float TimeScale { get; set; } = 1.0f;
-
-        private float HourRange { get; set; } = 24.0f;
 
         protected virtual void Update ()
 		{
-            PerformLightingUpdate();
+            PerformLightingUpdate(TimeController.Instance.GetDayPercentage());
 		}
 
-        private void UpdateLighting (float timePercentage)
+        private void UpdateLighting (float dayPercentage)
 		{
-            RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(timePercentage);
-            RenderSettings.fogColor = Preset.FogColor.Evaluate(timePercentage);
+            RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(dayPercentage);
+            RenderSettings.fogColor = Preset.FogColor.Evaluate(dayPercentage);
 
             if (DirectionalLight != null)
 			{
-                DirectionalLight.color = Preset.DirectionalColor.Evaluate(timePercentage);
-                DirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((timePercentage * 360.0f) - 90.0f, 170.0f, 0.0f));
+                DirectionalLight.color = Preset.DirectionalColor.Evaluate(dayPercentage);
+                DirectionalLight.transform.localRotation = Quaternion.Euler(new Vector3((dayPercentage * 360.0f) - 90.0f, 170.0f, 0.0f));
 			}
 		}
 
-        private void PerformLightingUpdate ()
+        private void PerformLightingUpdate (float dayPercentage)
 		{
             if (Preset == null)
 			{
                 return;
 			}
 
-            if (Application.isPlaying == true)
-			{
-                TimeOfDay += Time.deltaTime * TimeScale;
-                TimeOfDay %= HourRange;
-                UpdateLighting(TimeOfDay / HourRange);
-			}
-            else
-			{
-                UpdateLighting(TimeOfDay / HourRange);
-            }
+            UpdateLighting(dayPercentage);
         }
     }
 }
