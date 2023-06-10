@@ -1,5 +1,6 @@
 using Hydroponical.Logic.TimeManagement;
 using Hydroponical.Settings;
+using UnityEditor;
 using UnityEngine;
 
 namespace Hydroponical.Logic.Lighting
@@ -31,6 +32,7 @@ namespace Hydroponical.Logic.Lighting
 
         private void UpdateLighting (float dayPercentage)
 		{
+            dayPercentage = Mathf.Clamp(dayPercentage, 0.01f, 0.99f);
             RenderSettings.ambientLight = Preset.AmbientColor.Evaluate(dayPercentage);
             RenderSettings.fogColor = Preset.FogColor.Evaluate(dayPercentage);
 

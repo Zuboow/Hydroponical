@@ -12,7 +12,7 @@ Material:
     type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -21,6 +21,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 2909b7541429e0d48a94ebb50ea5217d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -35,17 +39,30 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Depth: 100
+    - _DepthStrength: 0.121
+    - _FoamScale: 30
+    - _FoamSpeed: 2
+    - _NormalStrength: 0.632
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Transparency: 0.88
-    - _WaterDensity: 200
+    - _Refraction: 0.023
+    - _Transparency: 1
+    - _WaterDensity: 100
+    - _WaterLerp: 0.015
     - _WaterMovementSpeed: 1
-    - _WaterSlimness: 3.5
+    - _WaterSlimness: 4.34
+    - _WaveScale: 5
+    - _WaveSpeed: 0.05
     - _WavesHeight: 0.1
     - _WavesSpeed: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.7235446, b: 1, a: 1}
+    - _BaseColor: {r: 0, g: 0.9882827, b: 1, a: 1}
+    - _UV1: {r: 80, g: 80, b: 0, a: 0}
+    - _UV2: {r: 80, g: 80, b: 0, a: 0}
     - _WaterColor: {r: 0.031372547, g: 0.9679316, b: 1, a: 0}
+    - _WaterNormalSpeed1: {r: 0.01, g: 0.05, b: 0, a: 0}
+    - _WaterNormalSpeed2: {r: 0.04, g: 0.01, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7222309553520759119
 MonoBehaviour:
