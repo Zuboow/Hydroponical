@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5be7ea080baf9ab4baf0eb2098ecbcd3, type: 3}
   m_Name: TimeSettings
   m_EditorClassIdentifier: 
-  <TimeOfDay>k__BackingField: 0
+  <TimeOfDay>k__BackingField: 6.3
   <TimeScale>k__BackingField: 3
   <HourRange>k__BackingField: 24

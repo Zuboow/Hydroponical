@@ -37,7 +37,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Transparency: 1
+    - _Transparency: 0.88
     - _WaterDensity: 200
     - _WaterMovementSpeed: 1
     - _WaterSlimness: 3.5

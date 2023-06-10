@@ -15,12 +15,12 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.7223312, g: 0.7404828, b: 0.8040191, a: 1}
+  m_FogColor: {r: 0.7528157, g: 0.8260449, b: 0.9323989, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.1
   m_LinearFogStart: 300
   m_LinearFogEnd: 1000
-  m_AmbientSkyColor: {r: 0.91356546, g: 0.54319096, b: 0.07807836, a: 1}
+  m_AmbientSkyColor: {r: 0.93500394, g: 0.6271012, b: 0.08707848, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.182141, g: 0.22454357, b: 0.28824574, a: 1}
+  m_IndirectSpecularColor: {r: 0.18369031, g: 0.22805804, b: 0.29869324, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -240,6 +240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 348477338}
   - component: {fileID: 348477339}
+  - component: {fileID: 348477340}
   m_Layer: 0
   m_Name: LightingManagement
   m_TagString: Untagged
@@ -278,6 +279,20 @@ MonoBehaviour:
   <Preset>k__BackingField: {fileID: 11400000, guid: 06cadf453dba458488e8af0f8c088943,
     type: 2}
   <TimeSettings>k__BackingField: {fileID: 11400000, guid: 80a3c6401bc94dd40b877b2967a87c8d,
+    type: 2}
+--- !u!114 &348477340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348477337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a733f3271ff5ec448be02a2390ccc1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ScriptableObjectToNest>k__BackingField: {fileID: 11400000, guid: 80a3c6401bc94dd40b877b2967a87c8d,
     type: 2}
 --- !u!1 &395777701
 GameObject:
@@ -924,7 +939,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9360507, b: 0.589707, a: 1}
+  m_Color: {r: 1, g: 0.94138056, b: 0.62390304, a: 1}
   m_Intensity: 2
   m_Range: 10
   m_SpotAngle: 30
@@ -982,7 +997,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1559515794}
-  m_LocalRotation: {x: 0.0148611255, y: 0.981606, z: -0.16986333, w: 0.08587945}
+  m_LocalRotation: {x: 0.01923506, y: 0.9716309, z: -0.21985759, w: 0.08500674}
   m_LocalPosition: {x: -0.27534294, y: 27.8404, z: -12.383413}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1135,6 +1150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1734262965}
   - component: {fileID: 1734262966}
+  - component: {fileID: 1734262967}
   m_Layer: 0
   m_Name: TimeManagement
   m_TagString: Untagged
@@ -1172,6 +1188,20 @@ MonoBehaviour:
   <TimeSettings>k__BackingField: {fileID: 11400000, guid: 80a3c6401bc94dd40b877b2967a87c8d,
     type: 2}
   <InitialTime>k__BackingField: 6
+--- !u!114 &1734262967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1734262964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a733f3271ff5ec448be02a2390ccc1a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <ScriptableObjectToNest>k__BackingField: {fileID: 11400000, guid: 80a3c6401bc94dd40b877b2967a87c8d,
+    type: 2}
 --- !u!1001 &1899429995
 PrefabInstance:
   m_ObjectHideFlags: 0
