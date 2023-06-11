@@ -15,12 +15,12 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 1
-  m_FogColor: {r: 0.70429915, g: 0.7981515, b: 0.9156965, a: 1}
+  m_FogColor: {r: 0.20286077, g: 0.4199605, b: 0.7287661, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.1
   m_LinearFogStart: 300
   m_LinearFogEnd: 1000
-  m_AmbientSkyColor: {r: 0.9095923, g: 0.84781396, b: 0.66581404, a: 1}
+  m_AmbientSkyColor: {r: 0.8749341, g: 0.8591679, b: 0.8960657, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -37,8 +37,8 @@ RenderSettings:
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
-  m_Sun: {fileID: 1559515796}
-  m_IndirectSpecularColor: {r: 0.17440036, g: 0.21811411, b: 0.30034658, a: 1}
+  m_Sun: {fileID: 0}
+  m_IndirectSpecularColor: {r: 0.17289549, g: 0.21606702, b: 0.29803127, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3630a7d9a05789a409e2ba930031be75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <DirectionalLight>k__BackingField: {fileID: 1559515796}
+  <DirectionalLight>k__BackingField: {fileID: 1524025049}
   <Preset>k__BackingField: {fileID: 11400000, guid: 06cadf453dba458488e8af0f8c088943,
     type: 2}
   <TimeSettings>k__BackingField: {fileID: 11400000, guid: 80a3c6401bc94dd40b877b2967a87c8d,
@@ -891,7 +891,7 @@ Transform:
   m_Father: {fileID: 2117561608}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1559515794
+--- !u!1 &1524025048
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -899,9 +899,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1559515797}
-  - component: {fileID: 1559515796}
-  - component: {fileID: 1559515795}
+  - component: {fileID: 1524025051}
+  - component: {fileID: 1524025049}
+  - component: {fileID: 1524025050}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -909,39 +909,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1559515795
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559515794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Version: 1
-  m_UsePipelineSettings: 1
-  m_AdditionalLightsShadowResolutionTier: 2
-  m_LightLayerMask: 1
-  m_CustomShadowLayers: 0
-  m_ShadowLayerMask: 1
-  m_LightCookieSize: {x: 1, y: 1}
-  m_LightCookieOffset: {x: 0, y: 0}
---- !u!108 &1559515796
+--- !u!108 &1524025049
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559515794}
+  m_GameObject: {fileID: 1524025048}
   m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.9811151, b: 0.8788363, a: 1}
-  m_Intensity: 2
+  m_Color: {r: 0.9851586, g: 0.9745129, b: 0.94753003, a: 1}
+  m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -950,7 +930,7 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.68
+    m_Strength: 0.728
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -980,32 +960,52 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 4414
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!4 &1559515797
+--- !u!114 &1524025050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524025048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 1
+  m_UsePipelineSettings: 1
+  m_AdditionalLightsShadowResolutionTier: 2
+  m_LightLayerMask: 1
+  m_CustomShadowLayers: 0
+  m_ShadowLayerMask: 1
+  m_LightCookieSize: {x: 1, y: 1}
+  m_LightCookieOffset: {x: 0, y: 0}
+--- !u!4 &1524025051
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1559515794}
-  m_LocalRotation: {x: 0.052147456, y: 0.79820484, z: -0.59604776, w: 0.06983393}
-  m_LocalPosition: {x: -0.27534294, y: 27.8404, z: -12.383413}
+  m_GameObject: {fileID: 1524025048}
+  m_LocalRotation: {x: 0.064000465, y: 0.6762178, z: -0.7315281, w: 0.059161432}
+  m_LocalPosition: {x: 265.2, y: 98.3, z: 530.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2117561608}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: -17.7, y: -190, z: 0}
+  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1570925486
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 395777703}
-  - {fileID: 1559515797}
+  - {fileID: 1524025051}
   - {fileID: 1515525166}
   - {fileID: 348477338}
   - {fileID: 1734262965}
@@ -1483,7 +1483,7 @@ PrefabInstance:
     - target: {fileID: 3889505970917279249, guid: 67bf62310907bf340921be273709799f,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.7071068
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3889505970917279249, guid: 67bf62310907bf340921be273709799f,
         type: 3}
@@ -1498,12 +1498,12 @@ PrefabInstance:
     - target: {fileID: 3889505970917279249, guid: 67bf62310907bf340921be273709799f,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 3889505970917279250, guid: 67bf62310907bf340921be273709799f,
         type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3889505970917279254, guid: 67bf62310907bf340921be273709799f,
         type: 3}

@@ -39,17 +39,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Depth: 100
-    - _DepthStrength: 0.121
+    - _Depth: 8.9
+    - _DepthStrength: 0.755
     - _FoamScale: 30
     - _FoamSpeed: 2
-    - _NormalStrength: 0.632
+    - _NormalStrength: 1
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Refraction: 0.023
+    - _Refraction: 0.008
     - _Transparency: 1
     - _WaterDensity: 100
-    - _WaterLerp: 0.015
+    - _WaterLerp: 0.208
     - _WaterMovementSpeed: 1
     - _WaterSlimness: 4.34
     - _WaveScale: 5
@@ -57,12 +57,13 @@ Material:
     - _WavesHeight: 0.1
     - _WavesSpeed: 1
     m_Colors:
-    - _BaseColor: {r: 0, g: 0.9882827, b: 1, a: 1}
-    - _UV1: {r: 80, g: 80, b: 0, a: 0}
-    - _UV2: {r: 80, g: 80, b: 0, a: 0}
+    - _BaseColor: {r: 0, g: 0.9161341, b: 1, a: 1}
+    - _DepthColor: {r: 0.008098972, g: 0.033568453, b: 0.24528301, a: 0}
+    - _UV1: {r: 100, g: 100, b: 0, a: 0}
+    - _UV2: {r: 100, g: 100, b: 0, a: 0}
     - _WaterColor: {r: 0.031372547, g: 0.9679316, b: 1, a: 0}
-    - _WaterNormalSpeed1: {r: 0.01, g: 0.05, b: 0, a: 0}
-    - _WaterNormalSpeed2: {r: 0.04, g: 0.01, b: 0, a: 0}
+    - _WaterNormalSpeed1: {r: -0.05, g: -0.05, b: 0, a: 0}
+    - _WaterNormalSpeed2: {r: 0.05, g: 0.05, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &7222309553520759119
 MonoBehaviour:
