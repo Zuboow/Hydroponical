@@ -73,19 +73,19 @@ MonoBehaviour:
   <FogColor>k__BackingField:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
-    key1: {r: 0.6037736, g: 0.40772188, b: 0.3047348, a: 1}
-    key2: {r: 0.18396229, g: 0.46399742, b: 1, a: 0}
-    key3: {r: 0.41509432, g: 0.16535607, b: 0.045033827, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
+    key1: {r: 1, g: 0.7939707, b: 0.7877358, a: 1}
+    key2: {r: 0.6427132, g: 0.69324446, b: 0.82632864, a: 0}
+    key3: {r: 0.6069776, g: 0.68316984, b: 0.8301887, a: 0}
+    key4: {r: 0.16981131, g: 0.08841077, b: 0.08250267, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
     key6: {r: 0, g: 0, b: 0, a: 0}
     key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 5975
-    ctime1: 14071
-    ctime2: 30262
-    ctime3: 49922
-    ctime4: 57247
-    ctime5: 57247
+    ctime0: 13300
+    ctime1: 17540
+    ctime2: 21781
+    ctime3: 36044
+    ctime4: 45682
+    ctime5: 54163
     ctime6: 57247
     ctime7: 50501
     atime0: 0
@@ -97,5 +97,5 @@ MonoBehaviour:
     atime6: 0
     atime7: 0
     m_Mode: 0
-    m_NumColorKeys: 5
+    m_NumColorKeys: 6
     m_NumAlphaKeys: 2
