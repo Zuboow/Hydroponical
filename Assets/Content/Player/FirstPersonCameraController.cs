@@ -53,7 +53,7 @@ namespace Hydroponical.Logic.Player
 
         private void SetCursorLockState ()
 		{
-            Cursor.lockState = CursorLockMode.Locked;
+            //Cursor.lockState = CursorLockMode.Locked;
         }
 
 		private void InitializePlayerActions ()

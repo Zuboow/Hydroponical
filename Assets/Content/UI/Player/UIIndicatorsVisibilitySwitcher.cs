@@ -6,6 +6,8 @@ namespace Hydroponical.UI
     {
         [field: SerializeField]
         private Transform InteractableUseIndicator { get; set; }
+        [field: SerializeField]
+        private Transform Pointer { get; set; }
 
         protected virtual void Start ()
 		{
@@ -37,9 +39,15 @@ namespace Hydroponical.UI
             InteractableUseIndicator.gameObject.SetActiveOptimized(isVisible);
 		}
 
+        private void SetPointerVisibility (bool isVisible)
+        {
+            Pointer.gameObject.SetActiveOptimized(isVisible);
+        }
+
         private void InitializeVisibility ()
 		{
             SetInteractableUseIndicatorVisibility(false);
+            SetPointerVisibility(true);
         }
     }
 }
