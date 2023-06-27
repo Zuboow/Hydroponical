@@ -9,9 +9,7 @@ namespace Hydroponical.UI
         [field: SerializeField]
         private float ScrollSpeed { get; set; } = 1.0f;
         [field: SerializeField]
-        private float MinPivotClamp { get; set; } = 0.2f;
-        [field: SerializeField]
-        private float MaxPivotClamp { get; set; } = 0.8f;
+        private InventoryType CurrentInventoryType { get; set; }
 
         private float TargetPivot { get; set; } = 0.5f;
 
@@ -40,9 +38,12 @@ namespace Hydroponical.UI
             UIActions.OnInventoryItemSelection -= SnapToItem;
         }
 
-        private void SnapToItem (int childIndex)
+        private void SnapToItem (int childIndex, InventoryType type)
 		{
-            TargetPivot = Mathf.Clamp(1.0f - (childIndex / ((float)OptionsContainer.childCount - 1)), MinPivotClamp, MaxPivotClamp);
+            if (CurrentInventoryType == type)
+			{
+                TargetPivot = 1.0f - (childIndex / ((float)OptionsContainer.childCount - 1));
+			}
         }
 
         private void ScrollToItem ()
